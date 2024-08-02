@@ -1,0 +1,184 @@
+:root {
+  --hue: 60;
+  --saturation: 80%;
+  --lightness: 70%;
+
+  --background: #0C5A99;
+  --content-font: 'Abel', sans-serif;
+}
+
+body {
+  font-family: var(--content-font);
+  background: var(--background);
+  box-sizing: border-box;
+  padding: 3ch;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr min(80ch, calc(100% - 16px)) 1fr;
+  grid-column-gap: 8px;
+  place-items: center;
+}
+
+.parent > * {
+  grid-column: 2;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -3ch;
+}
+
+a {
+  text-decoration: wavy;
+  text-decoration-line: underline;
+}
+
+section[id="previous-year"] > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-block-start: 20%;
+}
+
+.by-nuiteq {
+  font-size: var(--font-size-3);
+}
+
+:where(h1, h4) {
+  margin-block: var(--size-4);
+  text-shadow: 1px 1px 1px var(--gray-11);
+}
+
+:where(p, li) {
+  font-size: var(--font-size-4);
+}
+
+:where(h3) {
+  font-size: var(--font-size-6);
+  border-block-start: 2px solid currentColor;
+  color: var(--pink-5);
+  text-shadow: 1px 1px 1px var(--gray-11);
+}
+
+:where(h4) {
+  font-size: var(--font-size-5);
+  color: var(--lime-5);
+  border-block-start: 1px solid currentColor;
+}
+
+:where(p, ul) {
+  margin-block-end: var(--size-6);
+}
+
+:where(p, h1, h3, h4) {
+  max-inline-size: 100%;
+  text-align: center;
+}
+
+:where(a) {
+  color: var(--yellow-6);
+}
+
+:where(a):visited {
+  color: var(--green-7);
+}
+
+[data-type="name"] > span {
+  color: hsl(var(--hue) var(--saturation) var(--lightness));
+}
+
+small {
+  margin-block-end: var(--size-4);
+}
+
+@media(prefers-color-scheme: light) {
+  :where(h4, h3, h2, h1, p, li) {
+    color: var(--gray-3);
+  }
+
+  :where(dialog) {
+    background-color: var(--gray-0);
+    color: var(--gray-9)
+  }
+
+  :where(dialog h4, dialog h3, dialog h2, dialog h1, dialog p, dialog li) {
+    color: var(--gray-9);
+  }
+}
+
+.know-more {
+  font-size: var(--font-size-3);
+}
+
+button[name="close"] {
+  padding: 6px;
+  border-radius: 4px;
+  margin-block-end: 8px;
+}
+
+button[name="previous-year"] {
+  padding: 16px;
+  border-radius: 4px;
+  background-image: var(--gradient-19);
+  color: var(--gray-9);
+  font-size: var(--font-size-5);
+  box-shadow: var(--shadow-5);
+}
+
+.wave {
+  width: calc(100% + 6ch);
+  box-shadow: var(--shadow-1);
+  margin-left: -3ch;
+  height: 70px;
+}
+
+.wave-bottom {
+  margin-bottom: -3ch;
+  mask: var(--mask-edge-drip-top);
+  -webkit-mask: var(--mask-edge-drip-top);
+  background-image: var(--gradient-18);
+}
+
+.wave-top {
+  margin-top: -3ch;
+  mask: var(--mask-edge-drip-bottom);
+  -webkit-mask: var(--mask-edge-drip-bottom);
+  background: var(--blue-11);
+}
+
+.remaining-funds {
+  margin-top: 250px;
+}
+
+.mt-5 {
+  margin-top: 20px;
+}
+
+.reset-m {
+  margin: 0px;
+}
+
+.reset-mb {
+  margin-bottom: 0px;
+}
+
+.br-4 {
+  border-radius: 4px;
+}
+
+.yearly-contrib > li {
+  transition: color 0.2s ease-in;
+}
+
+.pending {
+  padding: 20px;
+  background: var(--blue-11);
+  box-shadow: var(--shadow-4);
+}
