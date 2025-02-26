@@ -123,7 +123,15 @@ const animateRemainingFunds = () => {
   observer.observe(funds);
 };
 
+const updateDurationInYears = () => {
+  const year = document.getElementById("durationInYears");
+  const startYear = 2016;
+  const currentYear = new Date().getFullYear();
+  year.innerText = currentYear - startYear;
+};
+
 rainbowColor();
 handleDialogEvents();
 animateRemainingFunds();
 textReveal();
+updateDurationInYears();

@@ -123,13 +123,14 @@ button[name="close"] {
   margin-block-end: 8px;
 }
 
-button[name="previous-year"] {
+div[name="previous-year"] {
   padding: 16px;
   border-radius: 4px;
   background-image: var(--gradient-19);
   color: var(--gray-9);
   font-size: var(--font-size-5);
   box-shadow: var(--shadow-5);
+  cursor: pointer;
 }
 
 .wave {
