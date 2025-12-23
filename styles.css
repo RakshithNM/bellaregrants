@@ -131,6 +131,10 @@ div[name="previous-year"] {
   font-size: var(--font-size-5);
   box-shadow: var(--shadow-5);
   cursor: pointer;
+  width: 135px;
+  text-align: center;
+  outline: 4px double black;
+  outline-offset: 3px;
 }
 
 .wave {
