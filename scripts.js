@@ -47,50 +47,18 @@ const countUp = () => {
 };
 
 const handleDialogEvents = () => {
-  const dialogOpener2022 = document.getElementById('dialogOpener2022');
-  const dialogOpener2023 = document.getElementById('dialogOpener2023');
-  const dialogOpener2024 = document.getElementById('dialogOpener2024');
-  const dialogOpener2025 = document.getElementById('dialogOpener2025');
-  const dialog2022 = document.getElementById('dialog2022');
-  const dialog2023 = document.getElementById('dialog2023');
-  const dialog2024 = document.getElementById('dialog2024');
-  const dialog2025 = document.getElementById('dialog2025');
-  const dialogClose2022 = document.getElementById('dialogClose2022');
-  const dialogClose2023 = document.getElementById('dialogClose2023');
-  const dialogClose2024 = document.getElementById('dialogClose2024');
-  const dialogClose2025 = document.getElementById('dialogClose2025');
-
-  dialogOpener2022.addEventListener('click', () => {
-    dialog2022.showModal();
-  });
-
-  dialogClose2022.addEventListener('click', () => {
-    dialog2022.close();
-  });
-
-  dialogOpener2023.addEventListener('click', () => {
-    dialog2023.showModal();
-  });
-
-  dialogClose2023.addEventListener('click', () => {
-    dialog2023.close();
-  });
-
-  dialogOpener2024.addEventListener('click', () => {
-    dialog2024.showModal();
-  });
-
-  dialogClose2024.addEventListener('click', () => {
-    dialog2024.close();
-  });
-
-  dialogOpener2025.addEventListener('click', () => {
-    dialog2025.showModal();
-  });
-
-  dialogClose2025.addEventListener('click', () => {
-    dialog2025.close();
-  });
+  const years = ["2022", "2023", "2024", "2025"];
+  for(const year of years) {
+    const openButton = document.getElementById(`dialogOpener${year}`);
+    const dialogElem = document.getElementById(`dialog${year}`);
+    const closeButton = document.getElementById(`dialogClose${year}`);
+    openButton.addEventListener('click', () => {
+      dialogElem.showModal();
+    });
+    closeButton.addEventListener('click', () => {
+      dialogElem.close();
+    });
+  }
 };
 
 const animateTextReveal = (element) => {
