@@ -50,12 +50,15 @@ const handleDialogEvents = () => {
   const dialogOpener2022 = document.getElementById('dialogOpener2022');
   const dialogOpener2023 = document.getElementById('dialogOpener2023');
   const dialogOpener2024 = document.getElementById('dialogOpener2024');
+  const dialogOpener2025 = document.getElementById('dialogOpener2025');
   const dialog2022 = document.getElementById('dialog2022');
   const dialog2023 = document.getElementById('dialog2023');
   const dialog2024 = document.getElementById('dialog2024');
+  const dialog2025 = document.getElementById('dialog2025');
   const dialogClose2022 = document.getElementById('dialogClose2022');
   const dialogClose2023 = document.getElementById('dialogClose2023');
   const dialogClose2024 = document.getElementById('dialogClose2024');
+  const dialogClose2025 = document.getElementById('dialogClose2025');
 
   dialogOpener2022.addEventListener('click', () => {
     dialog2022.showModal();
@@ -79,6 +82,14 @@ const handleDialogEvents = () => {
 
   dialogClose2024.addEventListener('click', () => {
     dialog2024.close();
+  });
+
+  dialogOpener2025.addEventListener('click', () => {
+    dialog2025.showModal();
+  });
+
+  dialogClose2025.addEventListener('click', () => {
+    dialog2025.close();
   });
 };
 
