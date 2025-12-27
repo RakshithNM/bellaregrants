@@ -18,7 +18,6 @@ body {
   background-size: var(--flower-gap);
   background-position: top left;
   background-attachment: fixed;
-  animation: drift 40s linear infinite;
 }
 
 .parent {
@@ -123,13 +122,15 @@ small {
 
 button[name="close"] {
   padding: 6px;
+  corner-shape: squircle;
   border-radius: 4px;
   margin-block-end: 8px;
 }
 
 div[name="previous-year"] {
   padding: 16px;
-  border-radius: 4px;
+  corner-shape: squircle;
+  border-radius: 20px;
   background-image: var(--gradient-19);
   color: var(--gray-9);
   font-size: var(--font-size-5);
@@ -179,6 +180,7 @@ div[name="previous-year"] {
 }
 
 .br-4 {
+  corner-shape: squircle;
   border-radius: 4px;
 }
 
@@ -194,8 +196,8 @@ div[name="previous-year"] {
 
 .form {
   background-color: var(--red-7);
-  border-radius: 50%;
   corner-shape: squircle;
+  border-radius: 50%;
   box-shadow: var(--shadow-5);
   cursor: pointer;
   display: inline-block;
@@ -213,9 +215,4 @@ div[name="previous-year"] {
   50% { transform: translate(1px, 1px); }
   75% { transform: translate(-1px, 1px); }
   100% { transform: translate(0, 0); }
-}
-
-@keyframes drift{
-  from { background-position: 0 0; }
-  to   { background-position: 0px 600px; }
 }
