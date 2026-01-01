@@ -45,7 +45,6 @@ section[id="previous-year"] > div {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-block-start: 20%;
 }
 
 .by-nuiteq {
@@ -161,10 +160,6 @@ div[name="previous-year"] {
   mask: var(--mask-edge-drip-bottom);
   -webkit-mask: var(--mask-edge-drip-bottom);
   background: var(--blue-11);
-}
-
-.remaining-funds {
-  margin-top: 250px;
 }
 
 .mt-5 {
