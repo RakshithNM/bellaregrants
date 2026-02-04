@@ -5,7 +5,6 @@
   --ink: #050a16;
   --muted: #2e3644;
   --accent: #0b3fb3;
-  --accent-soft: rgba(11, 63, 179, 0.16);
   --border: rgba(5, 10, 22, 0.2);
   --shadow: 0 24px 50px rgba(5, 10, 22, 0.18);
   --radius-lg: 16px;
@@ -14,7 +13,6 @@
   --space-2: 16px;
   --space-3: 24px;
   --space-4: 36px;
-  --space-5: 52px;
   --space-6: 72px;
   --content-font: "Sora", "Helvetica Neue", sans-serif;
   --display-font: "Sora", "Helvetica Neue", sans-serif;
@@ -298,7 +296,10 @@ dialog {
   width: min(640px, 90vw);
   box-shadow: var(--shadow);
   background: var(--surface);
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 dialog::backdrop {
