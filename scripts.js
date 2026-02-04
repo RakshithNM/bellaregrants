@@ -59,33 +59,17 @@ const handleDialogEvents = () => {
       dialogElem.close();
     });
   }
-};
 
-const animateTextReveal = (element) => {
-  const observerOptions = {
-    "threshold": 1
-  }
-  const observer2Callback = (entries) => {
-    entries.forEach((entry) => {
-      if(entry.isIntersecting) {
-        element.style.color = "white";
-      }
-      else {
-        element.style.color = "gray";
-      }
+  const gratitudeOpener = document.getElementById('gratitudeOpener');
+  const gratitudeDialog = document.getElementById('gratitudeDialog');
+  const gratitudeClose = document.getElementById('gratitudeClose');
+  if(gratitudeOpener && gratitudeDialog && gratitudeClose) {
+    gratitudeOpener.addEventListener('click', () => {
+      gratitudeDialog.showModal();
     });
-  }
-  let observer2 = new IntersectionObserver(observer2Callback, observerOptions);
-  observer2.observe(element);
-};
-
-const textReveal = () => {
-  const yearlyContribDOM = document.getElementsByClassName('yearly-contrib');
-  for(const parent of yearlyContribDOM) {
-    const yearlyContribPoints = parent.children;
-    for(const point of yearlyContribPoints) {
-      animateTextReveal(point);
-    }
+    gratitudeClose.addEventListener('click', () => {
+      gratitudeDialog.close();
+    });
   }
 };
 
@@ -112,5 +96,4 @@ const updateDurationInYears = () => {
 rainbowColor();
 handleDialogEvents();
 animateRemainingFunds();
-textReveal();
 updateDurationInYears();

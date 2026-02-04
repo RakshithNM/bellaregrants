@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0C5A99">
+  <meta name="theme-color" content="#1f5b57">
 
   <title>BELLARE GRANTS</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.bunny.net/">
-  <link href="https://fonts.bunny.net/css?family=abel:400" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://unpkg.com/open-props">
+  <link href="https://fonts.bunny.net/css?family=sora:300,400,500,600,700" rel="stylesheet"/>
+  <link href="https://fonts.bunny.net/css?family=instrument-serif:400,400i" rel="stylesheet"/>
   <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/open-props/masks.edges.min.css"/>
   <link rel="stylesheet" href="styles.css">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bellaregrants.netlify.app/">
   <meta property="og:title" content="BELLARE GRANTS">
   <meta property="og:image:secure_url" content="https://bellaregrants.netlify.app/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bellare Grants microgrants for education, health, open source, and research">
   <meta property="og:description" content="Microgrants of upto 1 lakh INR for education, medical, open source and research">
   <meta property="og:site_name" content="BELLARE GRANTS">
   <meta property="og:locale" content="en_US">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@rakshithbellare">
   <meta name="twitter:creator" content="@rakshithbellare">
   <meta name="twitter:url" content="https://bellaregrants.netlify.app/">
   <meta name="twitter:title" content="BELLARE GRANTS">
   <meta name="twitter:description" content="Microgrants of upto 1 lakh INR for education, medical, open source and research">
   <meta name="twitter:image" content="https://bellaregrants.netlify.app/og.jpg">
+  <meta name="twitter:image:alt" content="Bellare Grants microgrants for education, health, open source, and research">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDRBKRJGKL"></script>
   <script>
@@ -39,32 +43,33 @@
   </script>
   </head>
   <body>
-    <div class="wave wave-top"></div>
-    <div class="parent">
-      <section class="main">
+    <button class="gratitude-button" id="gratitudeOpener" aria-label="Open gratitude message">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6L12 3z"/>
+        <path d="M5 16l0.8 2.2L8 19l-2.2 0.8L5 22l-0.8-2.2L2 19l2.2-0.8L5 16z"/>
+        <path d="M19 16l0.8 2.2L22 19l-2.2 0.8L19 22l-0.8-2.2L16 19l2.2-0.8L19 16z"/>
+      </svg>
+    </button>
+    <main class="shell">
+      <section class="section hero">
         <h1><span data-type="name">BELLARE GRANTS</span></h1>
-        <p><span data-type="name">BELLARE GRANTS</span> is a microgrants initiative of upto 1 lakh INR per year to aid and provide support for education and health expenses, also to support research and open source software and hardware projects.</p>
-      </section>
-
-      <section class="main">
-        <h3>About the grants</h3>
-        <h4>What are <span data-type="name">BELLARE GRANTS</span>?</h4>
         <p><span data-type="name">BELLARE GRANTS</span> is a no-strings-attached microgrants program of upto 1 lakh INR to aid and provide support for education and health expenses, also to support research and open source software and hardware projects. Some of the eligible causes/initiatives/projects are listed below.</p>
       </section>
 
-      <section id="remaining-funds">
-        <h3>Funds remaining to be granted in 2026</h3>
-        <div class="pending mt-5 br-4">
+      <section class="section fund-section" id="remaining-funds">
+        <h4>Funds remaining to be granted in 2026</h4>
+        <div class="pending fund-card">
           <h1 class="reset-m"><span class="funds" data-pending-fund="100000">1000</span> INR</h1>
         </div>
       </section>
 
-      <section class="main" id="previous-year">
-        <h3>Previous years</h3>
-        <div class="mt-5">
+      <section class="section" id="previous-year">
+        <h4>Previous years</h4>
+        <div class="year-grid">
           <div
               id="dialogOpener2022"
-              name="previous-year">
+              name="previous-year"
+              class="year-card">
             <h3>2022</h3>
             <h5
                 class="know-more">
@@ -73,7 +78,8 @@
           </div>
           <div
               id="dialogOpener2023"
-              name="previous-year">
+              name="previous-year"
+              class="year-card">
             <h3>2023</h3>
             <h5
                 class="know-more">
@@ -82,7 +88,8 @@
           </div>
           <div
               id="dialogOpener2024"
-              name="previous-year">
+              name="previous-year"
+              class="year-card">
             <h3>2024</h3>
             <h5
                 class="know-more">
@@ -91,7 +98,8 @@
           </div>
           <div
               id="dialogOpener2025"
-              name="previous-year">
+              name="previous-year"
+              class="year-card">
             <h3>2025</h3>
             <h5
                 class="know-more">
@@ -102,7 +110,11 @@
       </section>
 
       <dialog id="dialog2022">
-        <button id="dialogClose2022" name="close">close</button>
+        <button id="dialogClose2022" name="close" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
         <h3>2022</h3>
 
         <h4>Total funds</h4>
@@ -133,7 +145,11 @@
       </dialog>
 
       <dialog id="dialog2023">
-        <button id="dialogClose2023" name="close">close</button>
+        <button id="dialogClose2023" name="close" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
         <h3>2023</h3>
 
         <h4>Total funds</h4>
@@ -168,7 +184,11 @@
       </dialog>
 
       <dialog id="dialog2024">
-        <button id="dialogClose2024" name="close">close</button>
+        <button id="dialogClose2024" name="close" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
         <h3>2024</h3>
 
         <h4>Total funds</h4>
@@ -204,10 +224,15 @@
           <li>Sullia Sanga - 2,000 INR</li>
           <li>Jayarama Suvarna Sambrama - 1,500 INR</li>
           <li>Bannada Mahalinga Statue, Rangamane - 1,000 INR</li>
+        </ul>
       </dialog>
 
       <dialog id="dialog2025">
-        <button id="dialogClose2025" name="close">close</button>
+        <button id="dialogClose2025" name="close" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
         <h3>2025</h3>
 
         <h4>Total funds</h4>
@@ -240,40 +265,51 @@
         </ul>
       </dialog>
 
-      <h4>What kinds of projects / initiatives / causes are eligible for the grant?</h4>
-      <p>All grants are no-strings-attached, it can be anything</p>
-      <ul>
-        <li>Hospital charges for critical illness.</li>
-        <li>Shortage of funds to pay school fees.</li>
-        <li>No funds to buy laptop while at college.</li>
-        <li>Run a book club.</li>
-        <li>Business setting up funds</li>
-        <li>New job, help with relocation funds.</li>
-        <li>Maintenance charges for a library.</li>
-        <li>Execute a side project(software or hardware).</li>
-        <li>Unpaid intern at a company, but interesting work. Help towards relocation and livelihood funds.</li>
-        <li>Something else...</li>
-      </ul>
-
-      <!-- <h4>How to apply?</h4> -->
-      <!-- <p>Please fill the <button class="form"><a target="_blank" rel="noopener noreferrer" href="https://forms.gle/QaqC4pgPuNupGTrD9">form</a></button></p> -->
-
-      <h4>Where are the funds from?</h4>
-      <p>Personal contribution by these people make <span data-type="name">BELLARE GRANTS</span> possible</p>
-      <ul>
-        <li><a target="_blank" href="https://www.linkedin.com/in/deekshithbellare">Deekshith Bellare</a></li>
-        <li><a target="_blank" href="https://rakshithnettar.com">Rakshith Bellare</a></li>
-        <li><a target="_blank" href="https://shreevidya.netlify.app">Shreevidya Mahabaladka</a></li>
-        <li><a target="_blank" href="https://akshithbellare.com">Akshith Bellare</a></li>
-        <li><a target="_blank" href="https://sridevir.netlify.app">Sridevi Rajashankar</a></li>
-      </ul>
+      <section class="section">
+        <h4>What kinds of projects / initiatives / causes are eligible for the grant?</h4>
+        <p>All grants are no-strings-attached, it can be anything</p>
+        <ul>
+          <li>Hospital charges for critical illness.</li>
+          <li>Shortage of funds to pay school fees.</li>
+          <li>No funds to buy laptop while at college.</li>
+          <li>Run a book club.</li>
+          <li>Business setting up funds</li>
+          <li>New job, help with relocation funds.</li>
+          <li>Maintenance charges for a library.</li>
+          <li>Execute a side project(software or hardware).</li>
+          <li>Unpaid intern at a company, but interesting work. Help towards relocation and livelihood funds.</li>
+          <li>Something else...</li>
         </ul>
+      </section>
 
+      <section class="section">
+        <h4>Where are the funds from?</h4>
+        <p>Personal contribution by these people make <span data-type="name">BELLARE GRANTS</span> possible</p>
+        <ul>
+          <li><a target="_blank" href="https://www.linkedin.com/in/deekshithbellare">Deekshith Bellare</a></li>
+          <li><a target="_blank" href="https://rakshithnettar.com">Rakshith Bellare</a></li>
+          <li><a target="_blank" href="https://shreevidya.netlify.app">Shreevidya Mahabaladka</a></li>
+          <li><a target="_blank" href="https://akshithbellare.com">Akshith Bellare</a></li>
+          <li><a target="_blank" href="https://sridevir.netlify.app">Sridevi Rajashankar</a></li>
+        </ul>
+      </section>
+
+      <section class="section">
         <h4>Why are you doing this?</h4>
-        <p>The grants have existed for around <span id="durationInYears"></span> years now, and we have made contributions and supported various causes and initiatives. The main purpose of setting up this website is to diversify the impact and reach. It also has a name now.</p>
+        <p>The grants have existed for around <span id="durationInYears"></span> years now, and we have made contributions and supported various causes and initiatives. The main purpose of setting up this website(built in 2022) is to diversify the impact and reach. It also has a name now.</p>
         <p>We strongly believe that you don't have to be rich or famous to provide patronage. We are just like all other common people who run <a href="https://github.com/nayafia/microgrants">microgrants</a>.</p>
-    </div>
-    <div class="wave wave-bottom"></div>
+      </section>
+    </main>
+
+    <dialog id="gratitudeDialog">
+      <button id="gratitudeClose" name="close" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+      <h4>Grateful to have been doing the grants for the last 10 years</h4>
+      <p>We are grateful to have donated through the grants for the past 10 years. Looking forward to help families, students, and community initiatives in the years to come.</p>
+    </dialog>
     <script src="scripts.js"></script>
   </body>
 </html>
