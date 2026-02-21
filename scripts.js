@@ -1,18 +1,25 @@
 /* Count up the remaining funds */
+const fundsFormatter = new Intl.NumberFormat('en-IN');
+const parseFundAmount = (value) => Number(String(value).replace(/[^0-9.-]/g, ''));
+const formatFundAmount = (value) => fundsFormatter.format(Math.max(0, Math.floor(value)));
+
 const countUp = () => {
   const funds = document.querySelectorAll('.funds');
   // Main function
   for(let fundElement of funds) {
+    const initialValue = parseFundAmount(fundElement.innerText);
+    fundElement.innerText = formatFundAmount(initialValue);
     const animateRemainingFunds = () => {
-      const target = Number(fundElement.getAttribute('data-pending-fund'));
-      const count = + fundElement.innerText;
+      const target = parseFundAmount(fundElement.getAttribute('data-pending-fund'));
+      const count = parseFundAmount(fundElement.innerText);
       const speed = 1000; // change animation speed here
       const inc = target / speed;
       if(count < target) {
-        fundElement.innerText = Math.ceil(count + inc);
+        const next = Math.min(target, Math.ceil(count + inc));
+        fundElement.innerText = formatFundAmount(next);
         setTimeout(animateRemainingFunds, 1);
       } else {
-        fundElement.innerText = target;
+        fundElement.innerText = formatFundAmount(target);
       }
     }
     animateRemainingFunds();
