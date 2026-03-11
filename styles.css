@@ -427,6 +427,7 @@ dialog h3 {
 
   h1 {
     font-size: clamp(2.4rem, 9vw, 3.4rem);
+    line-height: 1;
   }
 
   .fund-card {
